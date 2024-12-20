@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 250px 1fr;  /* sidebar width and rest */
+    grid-template-rows: auto 1fr;      /* navbar height and rest */
+}
+
+.sidebar {
+    background-color: #0891b2;
+    color: white;
+    grid-row: 1 / 3;     /* span from top to bottom */
+    grid-column: 1 / 2;  /* first column */
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    background-color: white;
+    grid-row: 1 / 2;     /* only first row */
+    grid-column: 2 / 3;  /* second column */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1;  /* This ensures the shadow shows over other elements */
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex: 1;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    flex: 2; 
+}
+
+.main {
+    background-color: #e2e8f0;
+    grid-row: 2 / 3;     /* second row */
+    grid-column: 2 / 3;  /* second column */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+.projects {
+    flex: 2;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.extra {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.announcements, .trending {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.announcements{
+    flex:2;
+}
+.trending{
+    flex:1;
+}
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 15px solid rgb(141, 141, 5);
+}
+
+h2{
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+ul{
+    list-style: none;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+li{
+    margin-bottom: 20px;
+}
+img{
+    width: 30px;
+    margin-right: 20px;
+}
+.buttons{
+    display: flex;
+    gap: 30px;
+}
+.icon{
+    background-color: #0891b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.acc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.search{
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+input{
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background-color: #e2e8f0;
+    width: 70%;
+}
+.profile{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
